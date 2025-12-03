@@ -117,6 +117,39 @@ INSERT INTO employees (first_name, last_name, age, salary, job, city, hire_date)
 ('Nathan', 'King', 30, 4000.00, 'Engineer', 'Amsterdam', '2020-07-08'),
 ('Olivia', 'Scott', 25, 3300.00, 'Designer', 'London', '2022-05-22');
 
+-- Création de la table jobs
+CREATE TABLE jobs (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    job_title VARCHAR(100) NOT NULL,
+    department VARCHAR(100),
+    min_salary DECIMAL(10, 2),
+    max_salary DECIMAL(10, 2),
+    required_experience INT
+);
+
+-- Insertion de données dans jobs
+INSERT INTO jobs (job_title, department, min_salary, max_salary, required_experience) VALUES
+('Developer', 'IT', 3000.00, 5000.00, 2),
+('Developer', 'IT', 3000.00, 5000.00, 2),
+('Engineer', 'Engineering', 4000.00, 6500.00, 3),
+('Engineer', 'Engineering', 4000.00, 6500.00, 3),
+('Manager', 'Management', 5000.00, 8000.00, 5),
+('Manager', 'Management', 5000.00, 8000.00, 5),
+('Designer', 'Creative', 3000.00, 4500.00, 2),
+('Designer', 'Creative', 3000.00, 4500.00, 2),
+('Analyst', 'Business', 3200.00, 4800.00, 1),
+('Doctor', 'Healthcare', 6000.00, 10000.00, 8),
+('Lawyer', 'Legal', 5500.00, 9500.00, 5),
+('Consultant', 'Business', 4500.00, 7000.00, 4),
+('Director', 'Management', 7000.00, 12000.00, 10),
+('Intern', 'Various', 1500.00, 2500.00, 0),
+('Data Scientist', 'IT', 5000.00, 8000.00, 3),
+('Architect', 'Engineering', 6000.00, 9000.00, 7),
+('Teacher', 'Education', 2800.00, 4200.00, 2),
+('Nurse', 'Healthcare', 3500.00, 5000.00, 3),
+('Accountant', 'Finance', 3800.00, 5500.00, 3),
+('Marketing Specialist', 'Marketing', 3500.00, 5200.00, 2);
+
 -- Désactiver le Safe Update Mode
 SET SQL_SAFE_UPDATES = 0;
 
