@@ -58,6 +58,64 @@ VALUES
     ('Jack', 'Cooper', 'Lawyer', '1990-04-14', 'Tokyo'),
     ('Lily', 'King', 'Teacher', '1983-09-27', 'Sydney'),
     ('Zoe', 'Wright', 'Designer', '1994-05-06', 'Los Angeles');
+    
+-- Création de la table books
+CREATE TABLE books (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(255) NOT NULL,
+    author VARCHAR(255) NOT NULL,
+    publication_year INT NOT NULL,
+    price DECIMAL(10, 2),
+    genre VARCHAR(100)
+);
+
+-- Insertion de données dans books
+INSERT INTO books (title, author, publication_year, price, genre) VALUES
+('The Great Gatsby', 'F. Scott Fitzgerald', 1925, 15.99, 'Fiction'),
+('To Kill a Mockingbird', 'Harper Lee', 1960, 18.50, 'Fiction'),
+('1984', 'George Orwell', 1949, 14.99, 'Dystopian'),
+('Harry Potter and the Sorcerer''s Stone', 'J.K. Rowling', 1997, 22.99, 'Fantasy'),
+('The Da Vinci Code', 'Dan Brown', 2003, 19.99, 'Thriller'),
+('The Hunger Games', 'Suzanne Collins', 2008, 17.50, 'Science Fiction'),
+('The Hobbit', 'J.R.R. Tolkien', 1937, 16.99, 'Fantasy'),
+('Pride and Prejudice', 'Jane Austen', 1813, 12.99, 'Romance'),
+('The Catcher in the Rye', 'J.D. Salinger', 1951, 13.99, 'Fiction'),
+('Life of Pi', 'Yann Martel', 2001, 20.99, 'Adventure'),
+('The Alchemist', 'Paulo Coelho', 1988, 14.50, 'Fiction'),
+('Gone Girl', 'Gillian Flynn', 2012, 21.99, 'Thriller'),
+('The Girl with the Dragon Tattoo', 'Stieg Larsson', 2005, 18.99, 'Mystery'),
+('The Fault in Our Stars', 'John Green', 2012, 16.50, 'Young Adult'),
+('Educated', 'Tara Westover', 2018, 24.99, 'Memoir');
+
+-- Création de la table employees
+CREATE TABLE employees (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    age INT NOT NULL,
+    salary DECIMAL(10, 2) NOT NULL,
+    job VARCHAR(100),
+    city VARCHAR(100),
+    hire_date DATE
+);
+
+-- Insertion de données dans employees
+INSERT INTO employees (first_name, last_name, age, salary, job, city, hire_date) VALUES
+('Alice', 'Smith', 28, 3500.00, 'Developer', 'Paris', '2020-03-15'),
+('Bob', 'Johnson', 35, 4500.00, 'Engineer', 'London', '2018-07-22'),
+('Charlie', 'Williams', 42, 5500.00, 'Manager', 'New York', '2015-01-10'),
+('David', 'Brown', 29, 3800.00, 'Developer', 'Berlin', '2021-05-18'),
+('Emma', 'Jones', 31, 4200.00, 'Designer', 'Paris', '2019-09-30'),
+('Frank', 'Garcia', 45, 6000.00, 'Director', 'Madrid', '2012-11-05'),
+('Grace', 'Martinez', 26, 3200.00, 'Analyst', 'London', '2022-02-14'),
+('Henry', 'Rodriguez', 38, 5000.00, 'Engineer', 'Tokyo', '2017-06-20'),
+('Iris', 'Lee', 33, 4700.00, 'Doctor', 'Seoul', '2016-08-12'),
+('Jack', 'Walker', 27, 3600.00, 'Developer', 'Sydney', '2021-10-01'),
+('Karen', 'Hall', 40, 5200.00, 'Lawyer', 'Toronto', '2014-04-25'),
+('Leo', 'Allen', 22, 2800.00, 'Intern', 'Paris', '2023-01-15'),
+('Maria', 'Young', 36, 4800.00, 'Consultant', 'Rome', '2018-12-03'),
+('Nathan', 'King', 30, 4000.00, 'Engineer', 'Amsterdam', '2020-07-08'),
+('Olivia', 'Scott', 25, 3300.00, 'Designer', 'London', '2022-05-22');
 
 -- Désactiver le Safe Update Mode
 SET SQL_SAFE_UPDATES = 0;
